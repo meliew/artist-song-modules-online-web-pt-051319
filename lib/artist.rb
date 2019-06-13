@@ -2,14 +2,14 @@ require 'pry'
 
 class Artist
   extend Memorable
-  extend Findable 
+  extend Findable
   attr_accessor :name
   attr_reader :songs
 
-  @@artists = []
+  @@all = []
 
   def initialize
-    @@artists << self
+    @@all << self
     @songs = []
   end
 
