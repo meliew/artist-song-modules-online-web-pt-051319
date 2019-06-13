@@ -7,16 +7,13 @@ class Artist
   include Memorable::InstanceMethods
   extend Findable
   include Paramable
-  
-
-
 
   @@artists = []
 
-  # def initialize
-  #   @@artists << self
-  #   @songs = []
-  # end
+  def initialize
+    super
+    @songs = []
+  end
 
   # def self.find_by_name(name)
   #   @@artists.detect{|a| a.name == name}
